@@ -12,6 +12,8 @@ This Repo Contains Computer Algorithms implemented in C++ with STL. This repo wi
 	1. POP
 	2. PUSH
 	3. PRINT
+	4. IS_FULL
+	5. IS_EMPTY
 	# USING CASE -> Stack<float> stack(LIMIT);
 ## Queues
 ## Graphs
