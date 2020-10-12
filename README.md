@@ -6,7 +6,7 @@ This Repo Contains Computer Algorithms implemented in C++ with STL. This repo wi
 	  2. Quick Union Find
 	  3. Union Find
   
-## Array
+## Arrays
 ## Linked Lists
 ## Stacks
 	1. POP
