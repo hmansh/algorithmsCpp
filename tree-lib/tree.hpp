@@ -208,15 +208,15 @@ class Tree {
         return _leafNodes_(root->left) + _leafNodes_(root->right);
     }
 
-    int _minNode_(Node* root, int & minval){
-        if (root == NULL) return 0;
+    void _minNode_(Node* root, int & minval){
+        if (root == NULL) return;
         if (root->val < minval) minval = root->val;
         _minNode_(root->left, minval);
         _minNode_(root->right, minval);
     }
 
-    int _maxNode_(Node* root, int & maxval){
-        if (root == NULL) return 0;
+    void _maxNode_(Node* root, int & maxval){
+        if (root == NULL) return;
         if (root->val > maxval) maxval = root->val;
         _maxNode_(root->left, maxval);
         _maxNode_(root->right, maxval);
@@ -270,6 +270,23 @@ class Tree {
         return maxlen;
     } 
 
+    int _diameter_(Node* root){
+        if (root == NULL) return 0;
+        int lh = _height_(root->left);
+        int rh = _height_(root->right);
+
+        int ld = _diameter_(root->left);
+        int rd = _diameter_(root->right);
+
+        return std::max(lh + rh + 1, std::max(ld, rd));
+    }
+
+    bool _searchNode_(Node* root, int key){
+        if (root == NULL) return false;
+        if (root->val == key) return true;
+        return _searchNode_(root->left, key) && _searchNode_(root->right, key);
+    }
+
 public:
 
     Tree(){
@@ -301,8 +318,6 @@ public:
     int minDepth();
     bool binarySearchTree();
     int maxWidth();
-
-    //phrase four
     int diameter();
     bool searchNode(int key);
     
@@ -405,6 +420,14 @@ bool Tree::binarySearchTree(){
 
 int Tree::maxWidth(){
     return _maxWidth_(root);
+}
+
+int Tree::diameter(){
+    return _diameter_(root);
+}
+
+bool Tree::searchNode(int key){
+    return _searchNode_(root, key);
 }
 
 

@@ -40,6 +40,30 @@ This Repo Contains Computer Algorithms implemented in C++ with STL. This repo wi
 	# USING CASE -> Stack<float> stack(LIMIT);
 ## Queues
 ## Graphs
+## Trees
+	1. void insertNode(int val);
+    2. void deleteNode(int val);
+    3. void inorder();
+    4. void preorder();
+    5. void postorder();
+    6. int height();
+    7. void inorderIter();
+    8. void preorderIter();
+    9. void postorderIter();
+    10. void levelorder();
+    11. void levelorderIter();
+    12. void spiralTraversal();
+    13. int nodesCount();
+    14. int nonLeafNodes();
+    15. int leafNodes();
+    16. int minNode();
+    17. int maxDepth();
+    18. int maxNode();
+    19. int minDepth();
+    20. bool binarySearchTree();
+    21. int maxWidth();
+    22. int diameter();
+    23. bool searchNode(int key);
 ## Sorting
 	  1. Bubble Sort 
 	  2. Merge Sort
