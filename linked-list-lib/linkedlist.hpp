@@ -138,7 +138,7 @@ class LinkedList {
     }
 
     int _predecessor_(int key){
-        if (head == NULL) return -inf;
+        if (head == NULL || head->val == key) return -inf;
         Node* temp = head;
         while(temp->next!= NULL){
             if (temp->next->val == key) break;
